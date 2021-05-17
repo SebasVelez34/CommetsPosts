@@ -1,0 +1,63 @@
+$count: 10;
+$width: 100;
+
+@mixin m-x {
+    @for $i from 1 through $count {
+        .m-#{$i} {
+            margin: $i * 1%;
+        }
+    }
+}
+
+@mixin mt-x {
+    @for $i from 1 through $count {
+        .mt-#{$i} {
+            margin-top: $i * 1%;
+        }
+    }
+}
+
+@mixin mb-x {
+    @for $i from 1 through $count {
+        .mb-#{$i} {
+            margin-bottom: $i * 1%;
+        }
+    }
+}
+
+@mixin p-x {
+    @for $i from 1 through $count {
+        .p-#{$i} {
+            padding: $i * 1%;
+        }
+    }
+}
+
+@mixin pt-x {
+    @for $i from 1 through $count {
+        .pt-#{$i} {
+            padding-top: $i * 1%;
+        }
+    }
+}
+
+@mixin pb-x {
+    @for $i from 1 through $count {
+        .pb-#{$i} {
+            padding-bottom: $i * 1%;
+        }
+    }
+}
+
+@mixin pb-x {
+    @for $i from 1 through $count {
+        .pb-#{$i} {
+            padding-bottom: $i * 1%;
+        }
+    }
+}
+
+@include m-x;
+@include mt-x;
+@include mb-x;
+@include p-x;
