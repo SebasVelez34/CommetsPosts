@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Icon } from 'emerald-ui';
+import { Navbar,} from 'emerald-ui';
 
 const NavbarPage = () => (
     <Navbar breakAt="lg" style={{ backgroundColor: '#046cfc' }}>
@@ -8,11 +8,6 @@ const NavbarPage = () => (
                 Patagonian Test
             </h2>
         </Navbar.Brand>
-        <Nav collapsible>
-            <a href="#foo">
-                <Icon name="email" />
-            </a>
-        </Nav>
     </Navbar>
 )
 

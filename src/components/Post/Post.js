@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Card, Button, Carousel } from 'emerald-ui';
 import ActionModal from '../Modal';
 import Commet from '../Comment';
@@ -46,4 +47,18 @@ const Post = (props) => {
     )
 }
 
+
+Post.propTypes = {
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    id: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    comments: PropTypes.array
+};
+
+Post.defaultProps = {
+    comments: []
+};
 export default Post;

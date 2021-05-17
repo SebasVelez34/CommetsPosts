@@ -13,14 +13,14 @@ function Home() {
     const { postsListReducer } = useSelector(state => state.postsList);
     const { commentsListReducer } = useSelector(state => state.commentsList);
     const { posts, loading: postsLoading, error: postsError } = postsListReducer;
-    const { comments, loading: commentsLoading, error: commentsError } = commentsListReducer;
+    const { comments, loading: commentsLoading,} = commentsListReducer;
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(commentsActions.fetchComments());
         dispatch(postsActions.fetchPosts());
     }, []);
 
-    const mergePosts = mergeComments({ posts, comments });
+    const mergePosts = postsLoading && commentsLoading ? [] : mergeComments({ posts, comments });
     return (
         <div style={{ backgroundImage: "url('./images/background.svg')", backgroundRepeat: "no-repeat" }}>
             <Navbar />

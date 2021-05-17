@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'emerald-ui/lib/Button';
 import Modal from 'emerald-ui/lib/Modal';
 
 const ActionModal = ({
@@ -21,12 +20,12 @@ const ActionModal = ({
 
 ActionModal.propTypes = {
     onHide: PropTypes.func.isRequired,
-    show: PropTypes.bool,
+    show: PropTypes.bool.isRequired,
     title: PropTypes.string
 };
 
 ActionModal.defaultProps = {
-    title: 'Modal',
+    title: 'Modal'
 };
 
 export default ActionModal;

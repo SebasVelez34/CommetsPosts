@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, Card, CardGrid } from 'emerald-ui';
+import { Panel, CardGrid } from 'emerald-ui';
 
 import Post from '../Post';
 
@@ -19,6 +19,7 @@ const List = ({ posts }) => (
 );
 
 List.propTypes = {
+    posts: PropTypes.array.isRequired
 };
 
 List.defaultProps = {

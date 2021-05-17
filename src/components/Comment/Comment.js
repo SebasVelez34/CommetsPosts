@@ -10,6 +10,7 @@ const Comment = (props) => {
     const [commentEmail, setCommentEmail] = useState('');
     const [showToast, setShowToast] = useState(false);
     const dispatch = useDispatch();
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = {
