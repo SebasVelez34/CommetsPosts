@@ -88,7 +88,7 @@ Comment.propTypes = {
     postId: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
-    ]).required,
+    ]),
 };
 
 
